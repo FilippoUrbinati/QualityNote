@@ -60,7 +60,7 @@ public class Main {
 
 
       Toolkit toolkit = Toolkit.getDefaultToolkit();
-      Image iconImage = toolkit.getImage("oq-icon.png");
+      Image iconImage = toolkit.getImage("../res/oq-icon.png");
       window.setIconImage(iconImage);
 
       window.setLayout(new BorderLayout());                                     //layout null

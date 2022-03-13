@@ -14,7 +14,6 @@ public class RoundedBorder implements Border {
    public static final String ALL_NO_FILLED = "ALL_NO_FILLED";
    public static final String TOP = "TOP";
    public static final String BOTTOM = "BOTTOM";
-   public static final String BOTTOM_JUST_BORDER = "BOTTOM_JUST_BORDER";
    public static final String LEFT = "LEFT";
    public static final String RIGHT = "RIGHT";
    public static final String TOP_LEFT = "TOP_LEFT";
@@ -57,8 +56,6 @@ public class RoundedBorder implements Border {
          graphics2D.fillRoundRect(x,y,width,height+this.radius,this.radius,this.radius);
       } else if (constant == BOTTOM) {
          graphics2D.fillRoundRect(x,y-this.radius,width,height+this.radius,this.radius,this.radius);
-      } else if (constant == BOTTOM_JUST_BORDER) {
-         graphics2D.drawRoundRect(x,y-this.radius,width,height+this.radius,this.radius,this.radius);
       } else if (constant == LEFT) {
          graphics2D.fillRoundRect(x,y,width+this.radius,height,this.radius,this.radius);
       } else if (constant == RIGHT) {

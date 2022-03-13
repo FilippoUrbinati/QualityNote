@@ -1,5 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.io.File;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -52,7 +53,10 @@ public class TextPanel extends JPanel {
       scrollPane.setBorder(new RoundedBorder(0, 16, RoundedBorder.BOTTOM));
       scrollPane.setOpaque(false);
       scrollPane.getViewport().setOpaque(false);
-      //scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+      scrollPane.getVerticalScrollBar().setBackground(new Color(0, 0, 0, 0));
+      scrollPane.getVerticalScrollBar().setUI(new CustomScrollBar());
+
       this.add(scrollPane);
 
 
