@@ -33,6 +33,7 @@ public class TextPanel extends JPanel {
       while (scanner.hasNextLine()) {
          textArea.append(scanner.nextLine() + "\n");
       }
+
       writer = new FileWriter(file);
 
       textArea.setBackground(new Color(0, 0, 0, 0));
@@ -69,6 +70,10 @@ public class TextPanel extends JPanel {
    public void saveText() throws IOException {
       writer.write(textArea.getText());
       writer.close();
+   }
+
+   public void setSelectedText(int fontStyle) {
+      //textArea.getSelectedText().setFont("Comic Sans MS", fontStyle, 18);
    }
 
 }

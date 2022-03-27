@@ -58,17 +58,14 @@ public class SizingDialog extends JDialog {
    public SizingDialog(JFrame window, TextPanel textPanel) {
       dialog = this;
 
-
       panel = new JPanel(new GridLayout(2, 3, 12, 12));
       sizingDialogSize = new Dimension(342, 164);
       this.setSize(sizingDialogSize);
       this.setAlwaysOnTop(true);
       this.setUndecorated(true);
-
       //fix little not transparent corners
       this.setBackground(transparent);
       panel.setOpaque(false);
-
       //background to give color context (for fillRoundRect in RoundedBorder class)
       panel.setBackground(new Color(44, 44, 44));
       panel.setDoubleBuffered(true);

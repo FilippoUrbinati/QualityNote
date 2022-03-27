@@ -14,6 +14,7 @@ public class TopBar extends JPanel {
    JButton textSettingButton = new JButton();//bella pe te ci vediamo la prossima volta che non so quando sarà
 
    SizingDialog sizingDialog;
+   TextSettingDialog textSettingDialog;
    Dimension lastSize = new Dimension();                                        //to return the window to the last size
    Point lastLocation = new Point();                                            //to return the window to the last location
    static Point compCoords;
@@ -41,7 +42,7 @@ public class TopBar extends JPanel {
       this.setBorder(new RoundedBorder(0, 16, RoundedBorder.TOP));             //set rounded border
       this.setVisible(true);                                                    //show
 
-      sizingDialog = new SizingDialog(window, textPanel);
+
 
       //EXIT BUTTON SETTINGS
       //colors
@@ -91,6 +92,7 @@ public class TopBar extends JPanel {
 
 
       //SCALE UP BUTTON SETTINGS
+      sizingDialog = new SizingDialog(window, textPanel);
       //colors
       Color topbarButtonColorDefault = this.getBackground();
       Color topbarUpButtonColorOver = new Color(50, 50, 50);
@@ -214,10 +216,8 @@ public class TopBar extends JPanel {
 
 
 
-
-
-
       //TEXT SETTINGS BUTTON SETTINGS
+      textSettingDialog = new TextSettingDialog(textPanel);
       //settings
       textSettingButton.setPreferredSize(new Dimension(18, 18));
       textSettingButton.setBackground(buttonColorDefault);                            //defaul color
@@ -231,7 +231,9 @@ public class TopBar extends JPanel {
          //button function
          public void mouseClicked(MouseEvent e) {
             if (SwingUtilities.isLeftMouseButton(e) && e.getClickCount() == 1) {
-
+               textSettingDialog.setLocation(getLocationOnScreen().x, getLocationOnScreen().y + 27);
+               textSettingDialog.setVisible(true);
+               textSettingButton.setEnabled(false);
             }
          }
          //color settings
@@ -354,8 +356,10 @@ public class TopBar extends JPanel {
             getRootPane().setBorder(new RoundedBorder(1, 16, RoundedBorder.ALL_NO_FILLED));
          }
          public void windowLostFocus(WindowEvent e) {
-            setBackground(panelColorNotFocused);
-            getRootPane().setBorder(new RoundedBorder(1, 16, RoundedBorder.ALL_NO_FILLED));
+            if (!textSettingDialog.isShowing() && !sizingDialog.isShowing()) {
+               setBackground(panelColorNotFocused);
+               getRootPane().setBorder(new RoundedBorder(1, 16, RoundedBorder.ALL_NO_FILLED));
+            }
          }
       });
 

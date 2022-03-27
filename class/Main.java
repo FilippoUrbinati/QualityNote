@@ -135,7 +135,8 @@ public class Main {
             } catch (IOException ex) {
                ex.printStackTrace();
             }
-            System.exit(0);
+            window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            //System.exit(0);
          }
       });
 
