@@ -10,12 +10,16 @@ import java.util.*;
 public class TextSettingDialog extends JDialog {
 
    Dimension dialogSize = new Dimension(198, 27);
+   Dimension buttonSize = new Dimension(23, 23);
    JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 1, 2));
    JButton bold = new JButton();
    JButton italic = new JButton();
    JButton underlined = new JButton();
    JButton barred = new JButton();
-   JButton list = new JButton();
+   ImageIcon listIcon = new ImageIcon(new ImageIcon("../res/list_button_image.png").getImage().getScaledInstance((int) buttonSize.getWidth(), (int) buttonSize.getHeight(), java.awt.Image.SCALE_SMOOTH));
+   //Image listImageScaled = listIcon.getImage().getScaledInstance(buttonSize.getWidth(), buttonSize.getHeight(), java.awt.Image.SCALE_SMOOTH);
+   //listIcon = new ImageIcon(listImageScaled);
+   JButton list = new JButton(listIcon);
 
    Color transparent = new Color(0, 0, 0, 0);
    Color borderButtonColor = new Color(110, 110, 110, 110);
@@ -44,7 +48,7 @@ public class TextSettingDialog extends JDialog {
 
 
       //button general settings
-      bold.setPreferredSize(new Dimension(23, 23));
+      bold.setPreferredSize(buttonSize);
       bold.setBackground(transparent);
       bold.setBorderPainted(true);                                              //left border
       bold.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, borderButtonColor));
@@ -90,7 +94,7 @@ public class TextSettingDialog extends JDialog {
 
 
 
-      italic.setPreferredSize(new Dimension(23, 23));
+      italic.setPreferredSize(buttonSize);
       italic.setBackground(transparent);
       italic.setBorderPainted(true);                                              //left border
       italic.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, borderButtonColor));
@@ -136,7 +140,7 @@ public class TextSettingDialog extends JDialog {
 
 
 
-      underlined.setPreferredSize(new Dimension(23, 23));
+      underlined.setPreferredSize(buttonSize);
       underlined.setBackground(transparent);
       underlined.setBorderPainted(true);                                              //left border
       underlined.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, borderButtonColor));
@@ -187,7 +191,7 @@ public class TextSettingDialog extends JDialog {
 
 
 
-      barred.setPreferredSize(new Dimension(23, 23));
+      barred.setPreferredSize(buttonSize);
       barred.setBackground(transparent);
       barred.setBorderPainted(true);                                              //left border
       barred.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, borderButtonColor));
@@ -239,13 +243,17 @@ public class TextSettingDialog extends JDialog {
 
 
 
-      list.setPreferredSize(new Dimension(23, 23));
+      list.setPreferredSize(buttonSize);
       list.setBackground(transparent);
       list.setBorderPainted(true);                                              //left border
       list.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, borderButtonColor));
       list.setContentAreaFilled(false);
       list.setOpaque(true);
       list.setFocusable(false);
+
+
+
+
       list.addMouseListener(new MouseAdapter() {
          //button function
          public void mouseClicked(MouseEvent e) {

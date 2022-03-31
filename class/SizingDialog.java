@@ -88,7 +88,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -127,7 +127,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -174,7 +174,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/3*2, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -214,7 +214,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/3, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -262,7 +262,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/3, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -302,7 +302,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/3, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -342,7 +342,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/3, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -390,7 +390,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/3, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -429,7 +429,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight/2);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -468,7 +468,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight/2);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -516,7 +516,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight/2);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -555,7 +555,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight/2);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -594,7 +594,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight/2);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -633,7 +633,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight/2);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -682,7 +682,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/4, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -722,7 +722,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/2, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);
@@ -762,7 +762,7 @@ public class SizingDialog extends JDialog {
                window.setSize(screenWidth/4, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                isEasySized = true;
             }
             dialog.setVisible(false);

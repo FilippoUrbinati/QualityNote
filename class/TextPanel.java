@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class TextPanel extends JPanel {
 
-   JTextArea textArea = new JTextArea();
+   JTextPane textPane = new JTextPane();
    JScrollPane scrollPane;
 
    File file = new File("../data/text.txt");
@@ -30,31 +30,29 @@ public class TextPanel extends JPanel {
       this.setVisible(true);
 
       Scanner scanner = new Scanner(file);
-      while (scanner.hasNextLine()) {
-         textArea.append(scanner.nextLine() + "\n");
-      }
-
+      /*while (scanner.hasNextLine()) {
+         textPane.append(scanner.nextLine() + "\n");
+      }*/
       writer = new FileWriter(file);
 
-      textArea.setBackground(new Color(0, 0, 0, 0));
-      textArea.setForeground(new Color(255, 255, 255));
-      textArea.setBorder(new RoundedBorder(10, 16, RoundedBorder.BOTTOM));
-      textArea.setOpaque(false);
-      textArea.setLineWrap(true);
-      textArea.setWrapStyleWord(true);
-      textArea.setTabSize(1);
-      textArea.setCaretColor(new Color(255, 255, 255));
-      textArea.setSelectedTextColor(new Color(70, 3, 124));
-      textArea.setSelectionColor(new Color(80, 80, 80));
-      textArea.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
+      textPane.setBackground(new Color(0, 0, 0, 0));
+      textPane.setForeground(new Color(255, 255, 255));
+      textPane.setBorder(new RoundedBorder(10, 16, RoundedBorder.BOTTOM));
+      textPane.setOpaque(false);
+      textPane.setCaretColor(new Color(255, 255, 255));
+      textPane.setSelectedTextColor(new Color(70, 3, 124));
+      textPane.setSelectionColor(new Color(80, 80, 80));
+      textPane.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
 
-      scrollPane = new JScrollPane(textArea);
+      scrollPane = new JScrollPane(textPane);
+      scrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+      scrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
       scrollPane.setBackground(new Color(0, 0, 0, 0));
       scrollPane.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());
       scrollPane.setBorder(new RoundedBorder(0, 16, RoundedBorder.BOTTOM));
       scrollPane.setOpaque(false);
       scrollPane.getViewport().setOpaque(false);
-
+      //scroll bar
       scrollPane.getVerticalScrollBar().setBackground(new Color(0, 0, 0, 0));
       scrollPane.getVerticalScrollBar().setUI(new CustomScrollBar());
 
@@ -63,17 +61,19 @@ public class TextPanel extends JPanel {
 
    }
 
-   public void setTextAreaPreferredSize(Dimension dimension) {
+   public void setTextPanePreferredSize(Dimension dimension) {
+      textPane.setPreferredSize(dimension);
       scrollPane.setPreferredSize(dimension);
    }
 
    public void saveText() throws IOException {
-      writer.write(textArea.getText());
+      writer.write(textPane.getText());
+      writer.flush();
       writer.close();
    }
 
    public void setSelectedText(int fontStyle) {
-      //textArea.getSelectedText().setFont("Comic Sans MS", fontStyle, 18);
+      //textPane.getSelectedText().setFont("Comic Sans MS", fontStyle, 18);
    }
 
 }

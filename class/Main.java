@@ -71,13 +71,13 @@ public class Main {
 
 
       textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - topBar.getHeight()));
-      textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - topBar.getHeight()));
+      textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - topBar.getHeight()));
       //when window change size, resize the text area
       opening = true;
       window.addComponentListener(new ComponentAdapter() {
          public void componentResized(ComponentEvent ev) {
             textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - topBar.getHeight()));
-            textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - topBar.getHeight()));
+            textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - topBar.getHeight()));
             //save not maximized size
             try {
                if (!topBar.isEasySized()) {

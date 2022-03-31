@@ -118,7 +118,7 @@ public class TopBar extends JPanel {
                   window.setSize(screenWidth, screenHeight);
                   lastLocation.setLocation(window.getLocation());
                   textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-                  textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+                  textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                } else {
                   try {scanner=new Scanner(lastSizeFile);}catch(IOException ex){ex.printStackTrace();}
                   window.setSize(scanner.nextInt(), scanner.nextInt());         //set last size
@@ -128,7 +128,7 @@ public class TopBar extends JPanel {
                   window.setLocation(lastLocation);                          //set last location
                   //resize textArea
                   textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-                  textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+                  textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
                }
             }
          }
@@ -295,21 +295,21 @@ public class TopBar extends JPanel {
                window.setSize(screenWidth, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
             } else if (e.getLocationOnScreen().x == 0) {
                isEasySized = true;
                window.setLocation(0, 0);
                window.setSize(screenWidth/2, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
             } else if (e.getLocationOnScreen().x == screenWidth-1) {
                isEasySized = true;
                window.setLocation(screenWidth/2, 0);
                window.setSize(screenWidth/2, screenHeight);
                //resize textArea
                textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-               textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+               textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
             } else {
                isEasySized = false;
                sizingDialog.setEasySized(false);
@@ -342,7 +342,7 @@ public class TopBar extends JPanel {
             }
             //resize textArea
             textPanel.setPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
-            textPanel.setTextAreaPreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
+            textPanel.setTextPanePreferredSize(new Dimension(window.getWidth(), window.getHeight() - 27));
 
          }
       });
